@@ -4,6 +4,12 @@ A simple Python script that monitors the print status of my Prusa i3 MK3 printer
 
 Runs on a Raspberry Pi Zero W, powered by [TinyCore Linux](http://tinycorelinux.net). It's lightweight, boots in seconds and id sd-card-corruption-proof™️.
 
+What it looks like in Home Assistant (paired up with an IP camera):
+![](https://savjee.github.io/3dmon/screenshot.png)
+
+Notification when the printer is done:
+![](https://savjee.github.io/3dmon/screenshot-notification.jpg)
+
 ## Motivation. Why?
 I wanted a simple way to monitor my 3D printer through Home Assistant. That way I could set up automations like: notify me when the printer is almost done.
 
