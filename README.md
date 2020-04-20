@@ -24,3 +24,5 @@ TODO...
 [Licensed under MIT](LICENSE)
 
 I'm not really good at Python (this is probably my first real project). Feel free to fix/improve my code ;)
+
+One thing to keep in mind: this project is all about **monitoring** 3D printers. I won't accept pull requests for control logic. Just trying to keeps things simple & reliable.
