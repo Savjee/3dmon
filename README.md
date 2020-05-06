@@ -20,6 +20,25 @@ Why TinyCore? It boots up in seconds and runs entirely in RAM. I can power cycle
 ## Setup
 TODO...
 
+### Setup crontab on Tinycore
+Add this to `/opt/bootlocal.sh` to start cron:
+
+```
+crond -L /dev/null 2>&1
+```
+
+Make sure that crontabs are persisted. Run: 
+
+```
+echo var/spool/cron >> /opt/.filetool.lst
+```
+
+Backup & reboot:
+````
+filetool.sh -b
+sudo reboot
+```
+
 ## License & contributions
 [Licensed under MIT](LICENSE)
 
