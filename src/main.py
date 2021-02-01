@@ -19,19 +19,22 @@ headers = {"Authorization": "Bearer " + API_TOKEN, "Content-Type": "application/
 # This functions updates the entity in Home Assistant
 ##
 def sendToHA(percent, timeLeft):
-	data = {
-		"state": percent,
-		"attributes": {
-			"unit_of_measurement": "%",
-			"friendly_name": FRIENDLY_NAME,
-			"timeLeft": timeLeft
-		}
-	}
 
-	print("Posting this to HA: " + json.dumps(data));
-	r = requests.post(url = API_URL + "/states/" + ENTITY_ID, headers=headers, data=json.dumps(data))
-	print(r.text)
+        try:
+            data = {
+                    "state": percent,
+                    "attributes": {
+                            "unit_of_measurement": "%",
+                            "friendly_name": FRIENDLY_NAME,
+                            "timeLeft": timeLeft
+                    }
+            }
 
+            print("Posting this to HA: " + json.dumps(data));
+            r = requests.post(url = API_URL + "/states/" + ENTITY_ID, headers=headers, data=json.dumps(data))
+            print(r.text)
+        except:
+            print("Error posting to HA. Down?")
 
 ###
 # Start listening to the serial interface and read lines!
