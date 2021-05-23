@@ -52,6 +52,6 @@ with serial.Serial(INTERFACE, 115200, timeout=1) as ser:
 		match = re.match(regex, line)
 
 		if match:
-			percent = match.group(1)
-			timeLeft = match.group(2)
+			percent = match.group(1).rstrip()
+			timeLeft = match.group(2).rstrip()
 			sendToHA(percent, timeLeft)
