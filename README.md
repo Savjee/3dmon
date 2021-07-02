@@ -52,6 +52,8 @@ sudo vi /opt/tcemirror
 tce-load -wi python3.8
 tce-load -wi py3.8serial
 tce-load -wi usb-serial-5.10.16-piCore
+tce-load -wi firmware-rpi-wifi
+tce-load -wi wifi
 ```
 > **Hint** - you can use the following command to search for packages:
 ```
